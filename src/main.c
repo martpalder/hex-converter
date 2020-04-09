@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned short askNumber();
-void printHex(unsigned short);
+unsigned int askNumber();
+void printHex(unsigned int);
 _Bool askQuit();
 
 int main(void) {
 	// variables
-	unsigned short num;
+	unsigned int num;
 	_Bool quit;
 	
 	while (1) {
@@ -24,18 +24,18 @@ int main(void) {
 	return 0;
 }
 
-unsigned short askNumber()
+unsigned int askNumber()
 {
-	unsigned short num;
+	unsigned int num;
 	printf("\nEnter a number: ");
 	scanf("%u", &num);
 	
 	return num;
 }
 
-void printHex(unsigned short num)
+void printHex(unsigned int num)
 {
-	char hex[sizeof(short) * 4 + 1];
+	char hex[sizeof(int) * 4 + 1];
 	sprintf(hex, "%X", num);
 	puts(hex);
 }
